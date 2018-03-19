@@ -1,0 +1,46 @@
+.header{
+    background-color: rgb(28, 71, 121);
+}
+.header a{
+    color:white;
+    text-decoration: none;
+}
+.nav-head{
+    display: flex;
+    justify-content: space-between;
+   
+}
+   
+.wrap-left
+{
+    display: flex;
+   justify-content: space-around;
+   flex:2
+          
+}
+.wrap-left a{
+flex:1;
+text-align: center;
+    
+}
+.wrap-right{
+    display: flex;
+   justify-content:space-around;
+   flex:1
+    
+}
+.wrap-right a{
+  flex:1;
+   text-align: center;
+   
+}
+.box2{
+    visibility: hidden;
+}
+
+.nav-head a:hover{
+    background-color: rgb(21, 53, 88);
+}
+.nav-head a:first-child:hover{
+    background-color: rgb(28, 71, 121);
+}
