@@ -14,12 +14,12 @@
 .wrap-left
 {
     display: flex;
-   justify-content: space-around;
+  
    flex:2;
           
 }
 .wrap-left a{
-flex:1;
+flex-basis: 100px;
 text-align: center;
 border-bottom: 2px solid #993326;
     
@@ -46,3 +46,4 @@ border-bottom: 2px solid #993326;
 .nav-head a:first-child:hover{
     background-color: rgb(28, 71, 121);
 }
+

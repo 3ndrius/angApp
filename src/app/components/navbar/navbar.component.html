@@ -5,14 +5,14 @@
         <img src="../../../favicon.ico" alt="ang-icon">
       </a>
       <a class="py-3  box" [routerLink]="['/']">Home</a>
-      <a class="py-3 box" [routerLink]="['/listings']">Lists</a>
-      <a class="py-3  box" [routerLink]="['/add-listing']">Add new</a>
+      <a *ngIf="(af.auth | async)" class="py-3 box" [routerLink]="['/listings']">Lists</a>
+      <a *ngIf="(af.auth | async)" class="py-3  box" [routerLink]="['/add-listing']">Add new</a>
     </div>
     <div class="wrap-right">
      
       <a class="py-3 box2" ></a>
-      <a class="py-3 box" (click)="login()" >Login</a>
-      <a class="py-3 box" (click)="logout()" >Logout</a>
+      <a *ngIf="!(af.auth | async)" class="py-3 box" (click)="login()" >Login</a>
+      <a *ngIf="(af.auth | async)" class="py-3 box" (click)="logout()" >Logout</a>
     </div>
    
    
