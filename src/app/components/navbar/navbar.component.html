@@ -1,7 +1,7 @@
 <nav class="header sticky-top ">
   <div class="container nav-head">
     <div class="wrap-left">
-      <a class="py-3 box" href="#">
+      <a class="py-3 box" >
         <img src="../../../favicon.ico" alt="ang-icon">
       </a>
       <a class="py-3  box" [routerLink]="['/']">Home</a>
@@ -10,8 +10,9 @@
     </div>
     <div class="wrap-right">
      
-      <a class="py-3 box2" href="#"></a>
-      <a class="py-3 box" href="#">Login</a>
+      <a class="py-3 box2" ></a>
+      <a class="py-3 box" (click)="login()" >Login</a>
+      <a class="py-3 box" (click)="logout()" >Logout</a>
     </div>
    
    
