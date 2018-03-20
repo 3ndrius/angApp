@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 
 
 import {FirebaseService} from './services/firebase.service';
+import {FlashMessagesModule} from 'angular2-flash-messages';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -28,7 +29,9 @@ const firebaseAuthConfig = {
 const appRoutes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'listings', component:ListingsComponent},
-  {path: 'add-listing', component:AddListingComponent}
+  {path: 'add-listing', component:AddListingComponent},
+  {path: 'listing/:id', component:ListingComponent}
+
 ]
 
 
@@ -48,6 +51,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase, firebaseAuthConfig),
     FormsModule,
     HttpModule,
+    FlashMessagesModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [FirebaseService],
