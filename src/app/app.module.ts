@@ -5,6 +5,12 @@ import { HttpModule } from '@angular/http';
 //me
 import {RouterModule, Routes} from '@angular/router';
 
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+
+
+import {FirebaseService} from './services/firebase.service';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListingsComponent } from './components/listings/listings.component';
@@ -32,11 +38,12 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
