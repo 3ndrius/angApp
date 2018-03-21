@@ -19,6 +19,6 @@ export class NavbarComponent implements OnInit {
 
   logout() {
     this.af.auth.logout();
-    this._flashMessagesService.show('We are in about component!', { cssClass: 'alert-success', timeout: 2000 });
+    this._flashMessagesService.show('You are logout successfully', { cssClass: 'alert-success', timeout: 2000 });
   }
 }
