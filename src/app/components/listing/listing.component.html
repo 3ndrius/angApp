@@ -9,26 +9,30 @@
   <div class="row p-2">
     <div class="col-md-4">
         
-        <img style="width:200px" height="150px" class="thumbnail" src="{{imageUrl}}">
+        <img style="width:250px" height="200px" class="thumbnail" src="{{imageUrl}}">
     </div>
     <div class="col-md-8">
       <ul class="list-group">
         <li class="list-group-item">
-          Owner: {{listing.owner}}
+          <b class="color">Owner:</b> {{listing.owner}}
         </li>
         <li class="list-group-item">
-          Beddroms: {{listing.bedrooms}}
+            <b class="color">Bedrooms:</b> {{listing.bedrooms}}
         </li>
         <li class="list-group-item">
-          Type: {{listing.type}}
+            <b class="color">Type: </b>  {{listing.type}}
         </li>
         <li class="list-group-item">
-          Price: {{listing.price}}
+            <b class="color">Price: </b> {{listing.price}}
         </li>
       </ul>
     </div>
 
-    <a [routerLink]="['/edit-listing/'+listing.$key]" class="btn btn-primary mt-2">Edit</a>
-    <a (click)="onDeleteClick()" class="btn btn-danger mt-2">Delete</a>
+    
+  </div>
+  <hr>
+  <div class="row p-4">
+      <a [routerLink]="['/edit-listing/'+listing.$key]" class="btn btn-primary mr-2">Edit</a>
+      <a (click)="onDeleteClick()" class="btn btn-danger ">Delete</a>
   </div>
 </div>

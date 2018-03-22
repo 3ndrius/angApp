@@ -1,5 +1,29 @@
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let listing of listings">
-<a [routerLink] = "['/listing/'+listing.$key]">  {{listing.title}}</a>
-  </li>
-</ul>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-lead text-center">All list</h1>
+        </div>
+      </div>
+      <hr>
+  <div class="row m-2 pb-4 search">
+   
+    <div class="col-md-12">
+      <form id="filter">
+          <h3 class="p-2">Search:</h3>
+          <input type="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" class="form-control" id="filter" placeholder=" ex. Miami Beach"/>
+      </form>
+    </div>
+  </div>
+ 
+ <div class="row p-2">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let listing of listings | filter:term ">
+    <a [routerLink] = "['/listing/'+listing.$key]">  {{listing.title | filter}}</a>
+      </li>
+    </ul>
+  </div>
+ </div>
+</div>
