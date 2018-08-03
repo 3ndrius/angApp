@@ -7,15 +7,11 @@ import {AngularFire} from 'angularfire2';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   constructor(public af:AngularFire, private _flashMessagesService: FlashMessagesService) { }
-
   ngOnInit() {
   }
-
   login() {
     this.af.auth.login();
     this._flashMessagesService.show('You are login successfully', { cssClass: 'alert-success', timeout: 2000 });
   }
-
 }
