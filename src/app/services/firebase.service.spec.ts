@@ -9,7 +9,6 @@ describe('FirebaseService', () => {
       providers: [FirebaseService]
     });
   });
-
   it('should ...', inject([FirebaseService], (service: FirebaseService) => {
     expect(service).toBeTruthy();
   }));
