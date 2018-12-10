@@ -14,6 +14,7 @@
 - list all
 - signIn by google
 - logout
+- live search by title
 
 <hr/>
 
