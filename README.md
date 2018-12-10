@@ -1,4 +1,28 @@
-# AngApp2
+
+# Book place register
+
+![Login](https://github.com/3ndrius/angApp/blob/master/src/localhost_4200_%20(3).jpg?raw=true)
+- Angular2/AngularCLI
+- HTML & CSS(Bootstrap 4)
+- Firebase/Firestore/Auth
+
+## Function
+
+- add new
+- edit
+- delete
+- list all
+- signIn by google
+- logout
+
+<hr/>
+
+![SinglePage](https://github.com/3ndrius/angApp/blob/master/src/localhost_4200_%20(1).jpg?raw=true)
+![SinglePage](https://github.com/3ndrius/angApp/blob/master/src/localhost_4200_%20(2).jpg?raw=true)
+
+
+<hr/>
+
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
